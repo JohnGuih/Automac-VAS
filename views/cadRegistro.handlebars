@@ -1,0 +1,23 @@
+<form action="/addRegistro" method="POST">
+    <p>Nome do Engenheiro: </p>
+    <select id="engenheiroId" name="engenheiroId">
+        {{#each engenheiros}}
+    	<option value="{{dataValues.id}}">{{dataValues.nome}}</option>
+        {{/each}}
+	</select>
+
+    <p>Obra id: </p>
+    <select id="obraId" name="obraId">
+        {{#each obras}}
+    	<option value="{{dataValues.id}}">{{dataValues.id}}</option>
+        {{/each}}
+	</select>
+
+    <p>Data de entrada no projeto: </p>
+    <input type="date" name="dataEntrada">
+
+    <p>Data de saida do projeto: </p>
+    <input type="date" name="dataSaida">
+
+    <button type="submit">Cadastrar</button>
+</form>

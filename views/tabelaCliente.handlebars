@@ -1,0 +1,27 @@
+<table style="width:100%">
+
+    <tr>
+        <th>id</th>
+        <th>nome</th>
+        <th>end</th>
+        <th>fone</th>
+        <th>celular</th>
+        <th>cpf</th>
+        <th>cnpj</th>
+    </tr>
+
+    {{#each clientes}}
+
+        <tr>
+            <th>{{dataValues.id}}</th>
+            <th>{{dataValues.nome}}</th>
+            <th>{{dataValues.end}}</th>
+            <th>{{dataValues.fone}}</th>
+            <th>{{dataValues.celular}}</th>
+            <th>{{dataValues.cpf}}</th>
+            <th>{{dataValues.cnpj}}</th>
+        </tr>
+
+    {{/each}}
+
+</table>

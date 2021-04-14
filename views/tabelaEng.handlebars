@@ -1,0 +1,30 @@
+<h1>Engenheiro: </h1>
+<table style="width:100%">
+
+    <tr>
+        <th>id</th>
+        <th>nome</th>
+        <th>end</th>
+        <th>fone</th>
+        <th>celular</th>
+        <th>cpf</th>
+        <th>crea</th>
+        <th>salario</th>
+    </tr>
+
+    {{#each engenheiros}}
+
+        <tr>
+            <th>{{dataValues.id}}</th>
+            <th>{{dataValues.nome}}</th>
+            <th>{{dataValues.end}}</th>
+            <th>{{dataValues.fone}}</th>
+            <th>{{dataValues.celular}}</th>
+            <th>{{dataValues.cpf}}</th>
+            <th>{{dataValues.crea}}</th>
+            <th>{{dataValues.salario}}</th>
+        </tr>
+
+    {{/each}}
+    
+</table>

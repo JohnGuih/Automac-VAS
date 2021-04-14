@@ -1,0 +1,22 @@
+<h1>Registro: </h1>
+<table style="width:100%">
+
+    <tr>
+        <th>dataEntrada</th>
+        <th>dataSaida</th>
+        <th>obraId</th>
+        <th>engenheiroId</th>
+    </tr>
+
+    {{#each registros}}
+
+        <tr>
+            <th>{{dateFormat dataValues.dataEntrada}}</th>
+            <th>{{dateFormat dataValues.dataSaida}}</th>
+            <th>{{dataValues.obraId}}</th>
+            <th>{{dataValues.engenheiroId}}</th>
+        </tr>
+
+    {{/each}}
+
+</table>
