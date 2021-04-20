@@ -176,5 +176,7 @@ const Associations = require("./models/Associations");
         })
     })
 
-    
- app.listen(8081, function(){console.log("Servidor rodando!");});
+const PORT = process.env.PORT || 8081
+app.listen(PORT,()=>{
+    console.log("Servidor rodando!");
+});
