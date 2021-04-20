@@ -8,10 +8,10 @@ Obra.belongsTo(Cliente);
 Obra.belongsToMany(Engenheiro, {through: Registro});
 Engenheiro.belongsToMany(Obra, {through: Registro});
 
-//Cliente.sync({alter: true});
-//Engenheiro.sync({alter: true});
-//Obra.sync({alter: true});
-//Registro.sync({alter: true});
+Cliente.sync({alter: true});
+Engenheiro.sync({alter: true});
+Obra.sync({alter: true});
+Registro.sync({alter: true});
 
 module.exports = {
     Cliente: Cliente,
