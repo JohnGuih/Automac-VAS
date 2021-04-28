@@ -1,0 +1,102 @@
+<h1>Cadastrar novo engenheiro:</h1>
+<div class="card">
+    <div class="card-body">
+        <form action="/admin/Obra/add" method="POST">
+            <div class="form-group">
+                <label for="dono">Dono: </label>
+                    <select id="clienteId" name="clienteId" class="form-control">
+                        <option disabled selected value>selecione um dono</option>
+                        {{#each clientes}}
+                        <option value="{{dataValues.id}}">{{dataValues.nome}}</option>
+                        {{/each}}
+                    </select>
+                <small id="descricao" class="form-text text-muted">Este campo é temporario e será mudado em versões futuras do site.</small>
+            </div>
+            <hr>
+            <div class="form-group mt-3">
+                <label for="end">Endereço: </label>
+                    <input type="text" name="end" id="end" placeholder="Ex: Av. Almeira" class="form-control">
+            </div>
+            <hr>
+            <div class="form-group mt-3">
+                <label for="bairro">Bairro: </label>
+                    <input type="text" name="bairro" id="bairro" placeholder="Ex: Fulano" class="form-control">
+            </div>
+            <hr>
+            <div class="form-group mt-3">
+                <label for="cidade">Cidade: </label>
+                    <input type="text" name="cidade" id="cidade" placeholder="Ex: Campos dos Goytacazes" class="form-control">
+            </div>
+            <hr>
+            <div class="form-group mt-3">
+                <label for="estado">Estado: </label>
+                    <input type="text" name="estado" id="estado" placeholder="Ex: Rio de Janeiro" class="form-control">
+            </div>
+            <hr>
+            <div class="form-group mt-3">
+                <label for="metragem">Metragem: </label>
+                <small id="descricao" class="form-text text-muted">Insira apenas numeros.</small>
+                    <input type="text" name="metragem" id="metragem" placeholder="Tamanho em M²" class="form-control">
+            </div>
+            <hr>
+            <div class="form-group mt-3">
+                <label for="quartos">Quartos: </label>
+                <small id="descricao" class="form-text text-muted">Insira apenas numeros.</small>
+                    <input type="text" name="quartos" id="quartos" placeholder="Quantos quartos" class="form-control">
+            </div>
+            <hr>
+            <div class="form-group mt-3">
+                <label for="wc">wc: </label>
+                <small id="descricao" class="form-text text-muted">Insira apenas numeros.</small>
+                    <input type="text" name="wc" id="wc" placeholder="Quantos banheiros" class="form-control">
+            </div>
+            <hr>
+            <div class="form-group mt-3">
+                <label for="andar">Andar: </label>
+                <small id="descricao" class="form-text text-muted">Insira apenas numeros.</small>
+                    <input type="text" name="andar" id="andar" placeholder="Quantos andares" class="form-control">
+            </div>
+            <hr>
+            <div class="form-group mt-3">
+                <label for="edificio">Edificio: </label>
+                <small id="descricao" class="form-text text-muted">Insira apenas numeros.</small>
+                    <input type="text" name="edificio" id="edificio" placeholder="Número de edificios" class="form-control">
+            </div>
+            <hr>
+            <div class="form-group mt-3">
+                <label for="situacao">Situação: </label>
+                <select id="situacao" name="situacao" class="form-control">
+                        <option disabled selected value>selecione uma situação</option>
+                        <option value="1">Concluída</option>
+                        <option value="2">Em andamento</option>
+                        <option value="3">Embargada</option>
+                </select>
+            </div>
+            <hr>
+            <div class="form-group mt-3">
+                <label for="dataInicio">Data inicial da construção: </label>
+                    <input type="date" name="dataInicio" id="dataInicio" class="form-control">
+            </div>
+            <hr>
+            <div class="form-group mt-3">
+                <label for="datTermino">Data final da construção: </label>
+                    <input type="date" name="dataTermino" id="dataTermino" class="form-control">
+            </div>
+            <hr>
+            <div class="form-group mt-3">
+                <label for="observacao">Observação: </label>
+                    <textarea name="observacao" id="observacao" placeholder="Ex: A propieda se encontra em estado de negociação podendo ser alterado o dono e os termos da construção..." class="form-control"></textarea></textarea>
+            </div>
+            <div class="form-check mt-3">
+                <label for="infra">Marque se o terreno possuir infraestrutura</label>
+                    <input type="checkbox" name="infra" value="true" id="infra" class="form-check-input">
+            </div>
+            <div class="form-check mt-3">
+                <label for="garagem">Marque se a obra terá garagem</label>
+                    <input type="checkbox" name="garagem" value="true" id="metragem" class="form-check-input">
+            </div>
+            <hr>
+            <button type="submit" class="btn btn-success">Cadastrar</button>
+        </form>
+    </div>
+</div>

@@ -1,50 +1,50 @@
-const db = require('./db')
+const { sequelize, DataTypes } = require('../db')
 
-const Obra = db.sequelize.define('obras', {
+const Obra = sequelize.define('obras', {
     end: {
-        type: db.Sequelize.STRING
+        type: DataTypes.STRING
     },
     bairro: {
-        type: db.Sequelize.STRING
+        type: DataTypes.STRING
     },
     cidade: {
-        type: db.Sequelize.STRING
+        type: DataTypes.STRING
     },
     estado: {
-        type: db.Sequelize.STRING
+        type: DataTypes.STRING
     },
     metragem: {
-        type: db.Sequelize.STRING
+        type: DataTypes.STRING
     },
     quartos: {
-        type: db.Sequelize.STRING
+        type: DataTypes.STRING
     },
     wc: {
-        type: db.Sequelize.STRING
+        type: DataTypes.STRING
     },
     infraestrutura: {
-        type: db.Sequelize.BOOLEAN
+        type: DataTypes.BOOLEAN
     },
     garagem: {
-        type: db.Sequelize.BOOLEAN
+        type: DataTypes.BOOLEAN
     },
     andar: {
-        type: db.Sequelize.STRING
+        type: DataTypes.STRING
     },
     edificio: {
-        type: db.Sequelize.STRING
+        type: DataTypes.STRING
     },
     situacao: {
-        type: db.Sequelize.STRING
+        type: DataTypes.STRING
     },
     dataInicio: {
-        type: db.Sequelize.DATE
+        type: DataTypes.DATE
     },
     dataTermino: {
-        type: db.Sequelize.DATE
+        type: DataTypes.DATE
     },
     observacao: {
-        type: db.Sequelize.STRING
+        type: DataTypes.STRING
     }
 });
 

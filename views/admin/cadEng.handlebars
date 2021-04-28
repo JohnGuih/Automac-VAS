@@ -1,0 +1,43 @@
+<h1>Cadastrar novo engenheiro:</h1>
+<div class="card">
+    <div class="card-body">
+        <form action="admin/Engenheiro/add" method="POST">
+            <div class="form-group">
+                <label for="nome">Nome: </label>
+                    <input type="text" name="nome" id="nome" placeholder="Ex: Fulano" class="form-control">
+            </div>
+            <hr>
+            <div class="form-group mt-3">
+                <label for="end">Endereço: </label>
+                    <input type="text" name="end" id="end" placeholder="Ex: Av. Brasil" class="form-control">
+            </div>
+            <hr>
+            <div class="form-group mt-3">
+                <label for="telefone">Telefone: </label>
+                    <input type="text" name="fone" id="fone" placeholder="Ex: 99 99999999" class="form-control">
+            </div>
+            <hr>
+            <div class="form-group mt-3">
+                <label for="celular">Celular: </label>
+                    <input type="text" name="celular" id="celular" placeholder="Ex: 99 999999999" class="form-control">
+            </div>
+            <hr>
+            <div class="form-group mt-3">
+                <label for="cpf">CPF: </label>
+                    <input type="text" name="doc" id="doc" placeholder="Ex: 999.999.999-19" class="form-control">
+            </div>
+            <hr>
+            <div class="form-group mt-3">
+                <label for="crea">Crea: </label>
+                    <input type="text" name="crea" id="crea" placeholder="Ex: 999999999-9" class="form-control">
+            </div>
+            <hr>
+            <div class="form-group mt-3">
+                <label for="salario">Salario: </label>
+                    <input type="number" step="0.01"  min="0" name="salario" id="salario" placeholder="Ex: 5000,00" class="form-control">
+            </div>
+            <hr>
+            <button type="submit" class="btn btn-success">Cadastrar</button>
+        </form>
+    </div>
+</div>

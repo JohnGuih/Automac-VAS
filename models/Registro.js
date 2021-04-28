@@ -1,11 +1,11 @@
-const db = require('./db');
+const { sequelize, DataTypes } = require('../db')
 
-const Registro = db.sequelize.define('registros', {
+const Registro = sequelize.define('registros', {
     dataEntrada: {
-        type: db.Sequelize.DATE
+        type: DataTypes.DATE
     },
     dataSaida: {
-        type: db.Sequelize.DATE
+        type: DataTypes.DATE
     }
 });
 

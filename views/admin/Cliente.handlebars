@@ -1,6 +1,7 @@
 <h1>Clientes:</h1>
 <div class="card">
     <div class="card-body">
+        <a class="btn btn-success" href="Cliente/cad">Cadastrar novo cliente</a>
         <table class="table table-striped mt-4">
             <tr>
                 <th scope="col">id</th>
@@ -10,6 +11,8 @@
                 <th scope="col">celular</th>
                 <th scope="col">cpf</th>
                 <th scope="col">cnpj</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
             </tr>
             {{#each clientes}}
                 <tr>
@@ -20,6 +23,8 @@
                     <td>{{dataValues.celular}}</td>
                     <td>{{dataValues.cpf}}</td>
                     <td>{{dataValues.cnpj}}</td>
+                    <td><a class="btn btn-success" href="#">Editar</a></td>
+                    <td><a class="btn btn-danger" href="#">Deletar</a></td>
                 </tr>
             {{/each}}
             

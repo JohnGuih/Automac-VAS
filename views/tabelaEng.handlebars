@@ -1,30 +1,29 @@
-<h1>Engenheiro: </h1>
-<table style="width:100%">
-
-    <tr>
-        <th>id</th>
-        <th>nome</th>
-        <th>end</th>
-        <th>fone</th>
-        <th>celular</th>
-        <th>cpf</th>
-        <th>crea</th>
-        <th>salario</th>
-    </tr>
-
-    {{#each engenheiros}}
-
-        <tr>
-            <th>{{dataValues.id}}</th>
-            <th>{{dataValues.nome}}</th>
-            <th>{{dataValues.end}}</th>
-            <th>{{dataValues.fone}}</th>
-            <th>{{dataValues.celular}}</th>
-            <th>{{dataValues.cpf}}</th>
-            <th>{{dataValues.crea}}</th>
-            <th>{{dataValues.salario}}</th>
-        </tr>
-
-    {{/each}}
-    
-</table>
+<h1>Engenheiros:</h1>
+<div class="card">
+    <div class="card-body">
+        <table class="table table-striped mt-4">
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">nome</th>
+                <th scope="col">end</th>
+                <th scope="col">fone</th>
+                <th scope="col">celular</th>
+                <th scope="col">cpf</th>
+                <th scope="col">crea</th>
+                <th scope="col">salario</th>
+            </tr>
+            {{#each engenheiros}}
+                <tr>
+                    <th>{{dataValues.id}}</th>
+                    <td>{{dataValues.nome}}</td>
+                    <td>{{dataValues.end}}</td>
+                    <td>{{dataValues.fone}}</td>
+                    <td>{{dataValues.celular}}</td>
+                    <td>{{dataValues.cpf}}</td>
+                    <td>{{dataValues.crea}}</td>
+                    <td>{{dataValues.salario}}</td>
+                </tr>
+            {{/each}}
+        </table>
+    </div>
+</div>

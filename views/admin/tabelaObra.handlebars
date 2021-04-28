@@ -1,0 +1,43 @@
+<table style="width:100%">
+
+    <tr>
+        <th>id</th>
+        <th>end</th>
+        <th>bairro</th>
+        <th>cidade</th>
+        <th>estado</th>
+        <th>metragem</th>
+        <th>wc</th>
+        <th>infraestrutura</th>
+        <th>garagem</th>
+        <th>andar</th>
+        <th>edificio</th>
+        <th>situacao</th>
+        <th>dataInicio</th>
+        <th>dataTermino</th>
+        <th>observacao</th>
+    </tr>
+
+    {{#each obras}}
+
+        <tr>
+            <th>{{dataValues.id}}</th>
+            <th>{{dataValues.end}}</th>
+            <th>{{dataValues.bairro}}</th>
+            <th>{{dataValues.cidade}}</th>
+            <th>{{dataValues.estado}}</th>
+            <th>{{dataValues.metragem}}</th>
+            <th>{{dataValues.wc}}</th>
+            <th>{{dataValues.infraestrutura}}</th>
+            <th>{{dataValues.garagem}}</th>
+            <th>{{dataValues.andar}}</th>
+            <th>{{dataValues.edificio}}</th>
+            <th>{{dataValues.situacao}}</th>
+            <th>{{dateFormat dataValues.dataInicio}}</th>
+            <th>{{dateFormat dataValues.dataTermino}}</th>
+            <th>{{dataValues.observacao}}</th>
+        </tr>
+
+    {{/each}}
+
+</table>

@@ -1,0 +1,38 @@
+<h1>Cadastrar novo cliente:</h1>
+<div class="card">
+    <div class="card-body">
+        <form action="/admin/Cliente/add" method="POST">
+            <div class="form-grop">
+                <label for="nome">Nome: </label>
+                    <input type="text" name="nome" id="nome" placeholder="Ex: Fulano" class="form-control">
+            </div>
+            <hr>
+            <div class="form-group mt-3">
+                <label for="end">Endereço: </label>
+                    <input type="text" name="end" id="end" placeholder="Ex: Av. Dias" class="form-control">
+            </div>
+            <hr>
+            <div class="form-group mt-3">
+                <label for="telefone">Telefone: </label>
+                    <input type="text" name="fone" id="fone" placeholder="Ex: 99 99999999" class="form-control">
+            </div>
+            <hr>
+            <div class="form-group mt-3">
+                <label for="celular">Celular: </label>
+                    <input type="text" name="celular" id="celular" placeholder="Ex: 99 999999999" class="form-control">
+            </div>
+            <hr>
+            <div class="form-group mt-3">
+                <label for="documento"> 
+                    <label for="cpf">CPF</label>
+                        <input type="radio" name="doctype" value="cpf" id="cpf">
+                    <label for="cnpj">| CNPJ</label>
+                        <input type="radio" name="doctype" value="cnpj" id="cnpj">
+                </label>
+                    <input type="text" name="doc" id="doc" class="form-control" placeholder="Ex: 999.999.999-19 / 999-9">
+            </div>
+            <hr>
+            <button type="submit" class="btn btn-success">Cadastrar</button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+<div class="card">
+    <div class="card-body">
+        <form action="add" method="POST">
+            <div class="form-group">
+                <label for="engenheiro">Nome do Engenheiro: </label>
+                    <select id="engenheiroId" name="engenheiroId" class="form-control">
+                        <option disabled selected value>Selecione um engenheiro</option>
+                        {{#each engenheiros}}
+                        <option value="{{dataValues.id}}">{{dataValues.nome}}</option>
+                        {{/each}}
+                    </select>
+                <small id="descricao" class="form-text text-muted">Este campo é temporario e será mudado em versões futuras do site.</small>
+            </div>
+            <hr>
+            <div class="form-group mt-3">
+                <label for="obra">Obra id: </label>
+                    <select id="obraId" name="obraId" class="form-control">
+                        <option disabled selected value>Selecione o id de uma obra</option>
+                        {{#each obras}}
+                        <option value="{{dataValues.id}}">{{dataValues.id}}</option>
+                        {{/each}}
+                    </select>
+                <small id="descricao" class="form-text text-muted">Este campo é temporario e será mudado em versões futuras do site.</small>
+            </div>
+            <hr>
+            <div class="form-group mt-3">
+                <label for="dataEntrada">Data de entrada no projeto: </label>
+                    <input type="date" name="dataEntrada" id="dataEntrada" class="form-control">
+            </div>
+            <hr>
+            <div class="form-group mt-3">
+                <label for="dataSaida">Data de saida do projeto: </label>
+                    <input type="date" name="dataSaida" id="dataSaida" class="form-control">
+            </div>
+            <hr>
+            <button type="submit" class="btn btn-success">Cadastrar</button>
+        </form>
+    </div>
+</div>

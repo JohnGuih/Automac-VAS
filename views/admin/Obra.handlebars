@@ -1,6 +1,7 @@
 <h1>Obras:</h1>
 <div class="card">
     <div class="card-body">
+        <a class="btn btn-success" href="Obra/cad">Cadastrar nova Obra</a>
         <div class="table-responsive">
             <table class="table table-striped mt-4">
                 <tr>
@@ -19,6 +20,8 @@
                     <th scope="col">dataInicio</th>
                     <th scope="col">dataTermino</th>
                     <th scope="col">observacao</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
                 </tr>
                 {{#each obras}}
                     <tr>
@@ -37,6 +40,8 @@
                         <td>{{dateFormat dataValues.dataInicio}}</td>
                         <td>{{dateFormat dataValues.dataTermino}}</td>
                         <td>{{dataValues.observacao}}</td>
+                        <td><a class="btn btn-success" href="#">Editar</a></td>
+                        <td><a class="btn btn-danger" href="#">Deletar</a></td>
                     </tr>
                 {{/each}}
             </table>

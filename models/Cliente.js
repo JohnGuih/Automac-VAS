@@ -1,23 +1,23 @@
-const db = require('./db');
+const { sequelize, DataTypes } = require('../db')
 
-const Cliente = db.sequelize.define('clientes', {
+const Cliente = sequelize.define('clientes', {
     nome: {
-        type: db.Sequelize.STRING
+        type: DataTypes.STRING
     },
     end: {
-        type: db.Sequelize.STRING
+        type: DataTypes.STRING
     },
     fone: {
-        type: db.Sequelize.STRING
+        type: DataTypes.STRING
     },
     celular: {
-        type: db.Sequelize.STRING
+        type: DataTypes.STRING
     },
     cpf: {
-        type: db.Sequelize.STRING
+        type: DataTypes.STRING
     },
     cnpj: {
-        type: db.Sequelize.STRING
+        type: DataTypes.STRING
     }
 });
 
