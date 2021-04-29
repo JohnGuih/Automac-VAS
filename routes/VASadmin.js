@@ -97,7 +97,6 @@
     })
 
     router.post('/Obra/add', function(req, res){
-        console.log(req.body.clienteId)
         let INFRA;
         let GARAGEM;
         if(req.body.infra == "true"){ INFRA = "true" } else { INFRA = "false" }
@@ -127,5 +126,43 @@
         (async () => {
             await res.redirect('/admin/Obra');
         })();
+    })
+
+    router.get('/delete/:table/:id', function(req, res){
+        switch(req.params.table){
+            case "Cliente":
+                Cliente.destroy({
+                    where: {
+                      id: {
+                        [Op.eq]: [req.params.id]
+                      }
+                    }
+                });
+                (async () => {
+                    await res.redirect('/admin/Cliente');
+                })();
+            case "Engenheiro":
+                Engenheiro.destroy({
+                    where: {
+                      id: {
+                        [Op.eq]: [req.params.id]
+                      }
+                    }
+                });
+                (async () => {
+                    await res.redirect('/admin/Engenheiro');
+                })();
+            case "Obra":
+                Obra.destroy({
+                    where: {
+                      id: {
+                        [Op.eq]: [req.params.id]
+                      }
+                    }
+                });
+                (async () => {
+                    await res.redirect('/admin/Obra');
+                })();
+        }
     })
  module.exports = router
